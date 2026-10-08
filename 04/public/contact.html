@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>My Node.js Website</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Contact Us</h2>
+
+    <div id="status"></div>
+
+    <form method="post" action="/contact">
+
+        <label>Name:</label>
+        <input type="text"
+               name="name"
+               required
+               maxlength="50">
+
+        <label>Email:</label>
+        <input type="email"
+               name="email"
+               required
+               maxlength="100">
+
+        <label>Message:</label>
+        <textarea name="message"
+                  required
+                  maxlength="500"></textarea>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const status = document.getElementById("status");
+
+    if (params.get("sent") === "1") {
+        status.innerHTML = "Message sent successfully!";
+        status.className = "success";
+    }
+
+    if (params.get("error") === "1") {
+        status.innerHTML = "Please fill all fields!";
+        status.className = "error";
+    }
+</script>
+
+</body>
+</html>

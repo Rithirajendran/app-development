@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Bites - Food Ordering App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="page-title">Fresh Bites Food Menu</h1>
+    <p class="page-tagline">Taste the Freshness, Love the Flavor</p>
+
+    <div class="page-wrapper">
+
+        <!-- ============================= -->
+        <!-- SEARCH, FILTER & SORT CONTROLS -->
+        <!-- ============================= -->
+        <div class="filter-bar">
+            <input type="text" id="searchInput" placeholder="🔍 Search food by name...">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Burger">Burger</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Biryani">Biryani</option>
+                <option value="Noodles">Noodles</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Desserts">Desserts</option>
+            </select>
+
+            <select id="sortPrice">
+                <option value="none">Sort by Price</option>
+                <option value="lowToHigh">Price: Low to High</option>
+                <option value="highToLow">Price: High to Low</option>
+            </select>
+        </div>
+
+        <!-- ============================= -->
+        <!-- FOOD CARDS -->
+        <!-- ============================= -->
+        <div class="food-container" id="foodContainer">
+
+            <div class="food-card" data-category="Burger" data-price="120">
+                <img src="https://www.noracooks.com/wp-content/uploads/2023/04/veggie-burgers-1-2.jpg" alt="Spicy Veg Burger" class="food-img">
+                <h3 class="food-name">Spicy Veg Burger</h3>
+                <p class="food-desc" data-full="Crispy patty with fresh veggies and sauce made with special herbs and spices.">Crispy patty with fresh veggies and sauce made with special herbs and spices.</p>
+                <div class="food-action">
+                    <p class="food-price">₹120</p>
+                    <button class="food-btn" data-name="Spicy Veg Burger" data-price="120">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Pizza" data-price="320">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.i71jMbDOUPWaSxKK9ZS-PQHaE7?pid=Api&P=0&h=180" alt="Cheese Delight Pizza" class="food-img">
+                <h3 class="food-name">Cheese Delight Pizza</h3>
+                <p class="food-desc" data-full="Cheesy layers with crispy base.">Cheesy layers with crispy base.</p>
+                <div class="food-action">
+                    <p class="food-price">₹320</p>
+                    <button class="food-btn" data-name="Cheese Delight Pizza" data-price="320">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Main Course" data-price="420">
+                <img src="https://i.pinimg.com/originals/31/97/0f/31970f32738b78085ad36c931afe19fd.jpg" alt="Creamy White Pasta" class="food-img">
+                <h3 class="food-name">Creamy White Pasta</h3>
+                <p class="food-desc" data-full="Rich sauce with soft pasta.">Rich sauce with soft pasta.</p>
+                <div class="food-action">
+                    <p class="food-price">₹420</p>
+                    <button class="food-btn" data-name="Creamy White Pasta" data-price="420">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Snacks" data-price="600">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.lDAfbbALjq-9DvTQ1iBxfgHaE5?pid=Api&P=0&h=180" alt="Grilled Sandwich" class="food-img">
+                <h3 class="food-name">Grilled Sandwich</h3>
+                <p class="food-desc" data-full="Toasted bread with spicy fillings.">Toasted bread with spicy fillings.</p>
+                <div class="food-action">
+                    <p class="food-price">₹600</p>
+                    <button class="food-btn" data-name="Grilled Sandwich" data-price="600">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Biryani" data-price="380">
+                <img src="https://tse1.mm.bing.net/th/id/OIP._rTsdRFBYd_7RwuIpTgu9AHaE8?pid=Api&P=0&h=180" alt="Chicken Biryani" class="food-img">
+                <h3 class="food-name">Chicken Biryani</h3>
+                <p class="food-desc" data-full="Fragrant rice cooked with spiced chicken.">Fragrant rice cooked with spiced chicken.</p>
+                <div class="food-action">
+                    <p class="food-price">₹380</p>
+                    <button class="food-btn" data-name="Chicken Biryani" data-price="380">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Biryani" data-price="480">
+                <img src="https://mapupa.com/wp-content/uploads/2023/04/Mutton-Biryani.jpg" alt="Mutton Biryani" class="food-img">
+                <h3 class="food-name">Mutton Biryani</h3>
+                <p class="food-desc" data-full="Tender mutton slow cooked with fragrant spiced rice.">Tender mutton slow cooked with fragrant spiced rice.</p>
+                <div class="food-action">
+                    <p class="food-price">₹480</p>
+                    <button class="food-btn" data-name="Mutton Biryani" data-price="480">Add to Cart</button>
+                </div>
+            </div>
+
+            
+
+            <div class="food-card" data-category="Noodles" data-price="420">
+                <img src="https://shwetainthekitchen.com/wp-content/uploads/2023/03/Indian-street-style-veg-noodles.jpg" alt="Veg Noodles" class="food-img">
+                <h3 class="food-name">Veg Noodles</h3>
+                <p class="food-desc" data-full="Stir fried noodles tossed with fresh vegetables.">Stir fried noodles tossed with fresh vegetables.</p>
+                <div class="food-action">
+                    <p class="food-price">₹420</p>
+                    <button class="food-btn" data-name="Veg Noodles" data-price="420">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="Snacks" data-price="248">
+                <img src="https://i.pinimg.com/originals/f5/63/86/f56386e8d550433ca98258c1c558006c.jpg" alt="Veg Spring Roll" class="food-img">
+                <h3 class="food-name">Veg Spring Roll</h3>
+                <p class="food-desc" data-full="Crispy rolls stuffed with mixed vegetables.">Crispy rolls stuffed with mixed vegetables.</p>
+                <div class="food-action">
+                    <p class="food-price">₹248</p>
+                    <button class="food-btn" data-name="Veg Spring Roll" data-price="248">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- No food items found message (hidden by default) -->
+        <p id="noResults" class="no-results" style="display:none;">No food items match your search.</p>
+
+        <!-- ============================= -->
+        <!-- SHOPPING CART -->
+        <!-- ============================= -->
+        <div class="cart-container">
+            <h2>🛒 Shopping Cart</h2>
+
+            <p>Total Items: <span id="itemCount">0</span></p>
+            <p>Total Amount: ₹<span id="totalPrice">0</span></p>
+
+            <ul id="cartList"></ul>
+
+            <button id="clearCartBtn" class="clear-cart-btn">Clear Cart</button>
+        </div>
+
+    </div>
+
+    <!-- Success message toast -->
+    <div id="toastMessage" class="toast"></div>
+
+    <footer>
+        © 2025 Fresh Bites | Taste the Best Every Day
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

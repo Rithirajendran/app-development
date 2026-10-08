@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Registration</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- FORM CARD -->
+    <div class="card" id="formCard">
+        <h2>📄  Students Internship Registration</h2>
+        <p class="sub">Academic & Skill Development Portal</p>
+
+        <form id="regForm">
+            <div class="field">
+                <input type="text" id="name" placeholder=" " required>
+                <label>Full Name</label>
+                <small class="error"></small>
+            </div>
+
+            <div class="field">
+                <input type="number" id="age" placeholder=" " required>
+                <label>Age</label>
+                <small class="error"></small>
+            </div>
+            <div class="gender-box">
+            <label class="gender-title">Gender</label>
+            <div class="gender-options">
+                 <input type="radio" name="gender" value="Male"> Male
+                 <input type="radio" name="gender" value="Female"> Female
+            </div>
+             <small class="error"></small>
+            </div>
+
+            <div class="field">
+                <input type="text" id="college" placeholder=" " required>
+                <label>College Name</label>
+                <small class="error"></small>
+            </div>
+
+   <div class="field">
+    <input type="text" id="department" placeholder=" " required >
+    <label>Department</label>
+    <small class="error"></small>
+</div>
+
+
+
+
+            <div class="field">
+                <input type="text" id="skills" placeholder=" " required>
+                <label>Skills</label>
+                <small class="error"></small>
+            </div>
+            <div class="field">
+    <input type="text" id="email" placeholder=" ">
+    <label>Email</label>
+    <small class="error"></small>
+</div>
+
+
+            <div class="field">
+                <input type="url" id="link" placeholder=" ">
+                <label>GitHub / Portfolio</label>
+                <small class="error"></small>
+            </div>
+
+            <div class="field">
+                <input type="password" id="password" placeholder=" " required>
+                <label>Password</label>
+                <small class="error"></small>
+            </div>
+
+            
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+
+    <!-- DETAILS CARD -->
+    <div class="card hidden" id="detailsCard">
+        <h2>✅ Registration Successful</h2>
+        <p class="sub">Your submitted details</p>
+
+        <div class="details" id="detailsBox"></div>
+
+        <button onclick="location.reload()">Register Again</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</ht
+
+
